@@ -1,14 +1,18 @@
 #include<stdio.h>
-int main(void){
-    int i;
+int inc(int counter);
 
-for(i=0; i<5; i++)
+int main(void)
 {
-    int temp = 1; 
-    //for안에꺼만 5번 반복하는데 반복할때마다 temp를 1로 정의함.
-    printf("temp = %d\n", temp);
-    temp++;
-}
-return 0;
+    int i=10;
+ printf("before i=%d\n", i);
+ i= inc(i);
+ printf("after i=%d\n", i);
 
+ return 0;
+}
+
+int inc(int counter)
+{
+counter++;
+return counter; 
 }
